@@ -2,7 +2,7 @@
   "name": "insight-ui-safecoin",
   "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the safecoin network and build your own services with it.",
   "version": "1.1.0",
-  "repository": "git://github.com/Fair-Exchange/insight-ui-safecoin.git",
+  "repository": "git://github.com/OleksandrBlack/insight-ui-safecoin.git",
   "contributors": [
     {
       "name": "Under"
@@ -44,9 +44,9 @@
     "build": "bower install && grunt compile"
   },
   "bugs": {
-    "url": "https://github.com/Fair-Exchange/insight-ui-safecoin/issues"
+    "url": "https://github.com/OleksandrBlack/insight-ui-safecoin/issues"
   },
-  "homepage": "https://github.com/Fair-Exchange/insight-ui-safecoin",
+  "homepage": "https://github.com/OleksandrBlack/insight-ui-safecoin",
   "license": "MIT",
   "keywords": [
     "insight",
