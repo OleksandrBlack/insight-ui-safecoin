@@ -1,6 +1,6 @@
 # Insight UI
 
-A Ravencoin blockchain explorer web application service for [Bitcore Node Safecoin](https://github.com/Fair-Exchange/bitore-node-safecoin) using the [Insight API](https://github.com/Fair-Exchange/insight-api-safecoin).
+A Ravencoin blockchain explorer web application service for [Bitcore Node Safecoin](https://github.com/OleksandrBlack/bitore-node-safecoin) using the [Insight API](https://github.com/OleksandrBlack/insight-api-safecoin).
 
 
 ## Development
@@ -52,11 +52,11 @@ compile***.
 
 ## Note
 
-For more details about the [Insight API](https://github.com/Fair-Exchange/insight-api-safecoin) configuration and end-points, go to [Insight API GitHub repository](https://github.com/Fair-Exchange/insight-api-safecoin).
+For more details about the [Insight API](https://github.com/OleksandrBlack/insight-api-safecoin) configuration and end-points, go to [Insight API GitHub repository](https://github.com/OleksandrBlack/insight-api-safecoin).
 
 ## Contribute
 
-Contributions and suggestions are welcomed at the [Insight UI GitHub repository](https://github.com/Fair-Exchange/insight-ui-safecoin).
+Contributions and suggestions are welcomed at the [Insight UI GitHub repository](https://github.com/OleksandrBlack/insight-ui-safecoin).
 
 
 ## License
