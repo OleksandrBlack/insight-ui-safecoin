@@ -629,25 +629,93 @@ margin-left: 0;
   display: inline-block;
   height: 80px;
 }
-#powered a.supernet {
-  background-image: url('../img/supernet.png');
-  background-size: 80px;
-  width: 100%;
+
+#powered a.safechat {
+    width: 25%;
+    background-size: 45px;
+    background-image: url(../img/safechat.png);
 }
-#powered a.nodejs {
-  background-image: url('../img/nodejs.png');
-  background-size: 80px;
-  width: 30%;
+
+#powered a.safetrade {
+    width: 25%;
+    background-size: 45px;
+    background-image: url(../img/safetrade.png);
 }
-#powered a.angularjs {
-  background-image: url('../img/angularjs.png');
-  background-size: 50px;
-  width: 20%;
+
+#powered a.safenodes {
+    width: 25%;
+    background-size: 45px;
+    background-image: url(../img/safenodes.png);
 }
-#powered a.leveldb {
-  background-image: url('../img/leveldb.png');
-  background-size: 50px;
-  width: 20%;
+
+#powered a.safepay {
+    width: 25%;
+    background-size: 45px;
+    background-image: url(../img/safepay.png);
+}
+
+#powered a.bitcointalk {
+    width: 25%;
+    background-size: 45px;
+    background-image: url(../img/bitcointalk.png);
+}
+
+#powered a.twitter {
+    width: 25%;
+    background-size: 45px;
+    background-image: url(../img/twitter.png);
+}
+
+#powered a.reddit {
+    width: 25%;
+    background-size: 45px;
+    background-image: url(../img/reddit.png);
+}
+
+#powered a.discord {
+    width: 25%;
+    background-size: 45px;
+    background-image: url(../img/discord.png);
+}
+
+#powered a.twitter:hover {
+    background-image: url(../img/twitter.png);
+    filter: drop-shadow(0px 0 3px #000)
+}
+
+#powered a.reddit:hover {
+    background-image: url(../img/reddit.png);
+    filter: drop-shadow(0px 0 3px #000)
+}
+
+#powered a.discord:hover {
+    background-image: url(../img/discord.png);
+    filter: drop-shadow(0px 0 3px #000)
+}
+
+#powered a.safechat:hover {
+    background-image: url(../img/safechat.png);
+	filter: drop-shadow(0px 0 3px #000)
+}
+
+#powered a.safetrade:hover {
+    background-image: url(../img/safetrade.png);
+	filter: drop-shadow(0px 0 3px #000)
+}
+
+#powered a.safenodes:hover {
+    background-image: url(../img/safenodes.png);
+	filter: drop-shadow(0px 0 3px #000)
+}
+
+#powered a.safepay:hover {
+    background-image: url(../img/safepay.png);
+	filter: drop-shadow(0px 0 3px #000)
+}
+
+#powered a.bitcointalk:hover {
+    background-image: url(../img/bitcointalk.png);
+	filter: drop-shadow(0px 0 3px #000)
 }
 
 @keyframes rotateThis {
