@@ -41,7 +41,7 @@ angular.module('insight.blocks').controller('BlocksController',
   $scope.humanSince = function(time) {
     var m = moment.unix(time).startOf('day');
     var b = moment().startOf('day');
-    return moment.min(m).from(b);
+    return m.max().from(b);
   };
 
 
@@ -68,12 +68,6 @@ angular.module('insight.blocks').controller('BlocksController',
       $scope.loading = false;
       $scope.blocks = res.blocks;
       $scope.pagination = res.pagination;
-      $scope.pagination.olderBlocks = $scope.pagination.moreTs;
-      for (var key in $scope.blocks) {
-        if($scope.blocks[key].time < $scope.pagination.olderBlocks){
-          $scope.pagination.olderBlocks = $scope.blocks[key].time;
-        }
-		  }
     });
   };
 

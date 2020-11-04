@@ -5,7 +5,7 @@
 <section data-ng-controller="IndexController" data-ng-init="index()">
   <div class="container">
     <div id="home" class="row">
-      <div class="col-xs-12 col-md-8">
+      <div class="col-xs-12 col-md-8 col-gray">
 
         <div id="search-form-mobile" class="visible-xs" data-ng-include src="'views/includes/search.html'"></div>
 
@@ -52,7 +52,7 @@
             <td>
               <a class="ellipsis" href="tx/{{tx.txid}}">{{tx.txid}}</a>
             </td>
-            <td class="text-right"><span class="ellipsis">{{$root.currency.getConvertion(tx.valueOut)}}</span></td>
+            <td class="text-right"><span class="ellipsis">{{$root.currency.getConvertion(tx.valueOut) || tx.valueOut + ' SAFE'}}</span></td>
           </tr>
           </tbody>
         </table>
@@ -63,7 +63,6 @@
         <h2><img style="max-height: 89px; display: block; margin-left: auto; margin-right: auto; padding-bottom: 10px;" src="../../img/safecoin_tm.svg" class="brand-logo"></h2>
         <p style="text-align: center;" translate>Visit our official website <a href="https://safecoin.org">safecoin.org</a></p>
         <div id="powered" class="row">
-		
           <div class="powered-text">
             <small class="text-muted" translate>Safecoin Products</small>
           </div>

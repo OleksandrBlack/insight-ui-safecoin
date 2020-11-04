@@ -1,11 +1,8 @@
 {
   "name": "insight-ui-safecoin",
-  "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the safecoin network and build your own services with it.",
-  "version": "0.4.0",
-  "repository": {
-    "type": "git",
     "url": "git://github.com/OleksandrBlack/insight-ui-safecoin.git"
-  },
+  "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the zelcash network and build your own services with it.",
+  "version": "1.1.0",
   "contributors": [
     {
       "name": "OleksandrBlack"
@@ -33,8 +30,19 @@
     {
       "name": "Jack Grigg",
       "email": "jack@z.cash"
+    },
+    {
+      "name": "Tadeas Kmenta",
+      "email": "tadeas.kmenta@zel.cash"
+    },
+    {
+      "name": "Simon Liu",
+      "email": "simon@z.cash"
     }
   ],
+  "scripts": {
+    "build": "bower install && grunt compile"
+  },
   "bugs": {
     "url": "https://github.com/OleksandrBlack/insight-ui-safecoin/issues"
   },
