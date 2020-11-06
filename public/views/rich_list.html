@@ -72,6 +72,7 @@
 					</tr>
 					<tr ng-repeat="item in RL.items">
 						<td>{{$index + 1}}</td>
+						<td>{{ item.address }}</td>   
 						<td>{{ item.balance | numeraljs : '0,0[.][00000000]' }} SAFE</td>
 						<td>{{ item.blocks_mined ? item.blocks_mined : 0 }}</td>
 					</tr>
