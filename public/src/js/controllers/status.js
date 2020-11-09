@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('insight.status').controller('StatusController',
-  function ($scope, $routeParams, $location, Global, Status, Sync, Peers, getSocket) {
+  function ($scope, $routeParams, $location, Global, Status, Sync, Peers, SafeNodes, getSocket) {
     $scope.global = Global;
     $scope.loading = false;
     $scope.getStatus = function (q) {
@@ -59,6 +59,25 @@ angular.module('insight.status').controller('StatusController',
         function (res) {
           $scope.loading = false;
           $scope.peers = res.peerInfo;
+        });
+    };
+    $scope.getActiveNodes = function () {
+      $scope.loading = true;
+
+      SafeNodes.get({},
+        function (res) {
+          $scope.loading = false;
+          $scope.safenodes = res.SafeNodes;
+        });
+      SafeNodes.get(
+		function (res) {
+          $scope.loading = false;
+          $scope.node_count = res.node_count;
+          $scope.tier_0_count = res.tier_0_count;
+          $scope.tier_1_count = res.tier_1_count;
+          $scope.tier_2_count = res.tier_2_count;
+          $scope.tier_3_count = res.tier_3_count;
+          $scope.collateral_total = res.collateral_total;
         });
     };
   });

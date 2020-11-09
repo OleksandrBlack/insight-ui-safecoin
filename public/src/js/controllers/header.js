@@ -27,6 +27,9 @@ angular.module('insight.system').controller('HeaderController',
       'title': 'Connections',
       'link': 'network'
     }, {
+      'title': 'SafeNodes',
+      'link': 'safenodes'
+    }, {
       'title': 'Status',
       'link': 'status'
     }];
