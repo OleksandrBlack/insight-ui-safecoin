@@ -46,7 +46,7 @@
 							<td>{{ interval.count | numeraljs : '0,0' }}</td>
 							<td>{{ interval.addressesPercent | numeraljs : '0,0[.][00]'}}%</td>
 							<td>{{ interval.sum | numeraljs : '0,0[.][00000000]' }} <small>(SAFE)</small></td>
-							<td>${{ interval.sum * CC.marketsInfo.price | numeraljs : '0,0[.][00]' }} <small>(USD)</small></td>
+							<td>${{ interval.sum * CC.marketsInfo.price_usd | numeraljs : '0,0[.][00]' }} <small>(USD)</small></td>
 							<td>{{ interval.coinsPercent | numeraljs : '0,0[.][00]' }}%</td>
 						</tr>
 					</tbody>
@@ -72,7 +72,9 @@
 					</tr>
 					<tr ng-repeat="item in RL.items">
 						<td>{{$index + 1}}</td>
-						<td>{{ item.address }}</td>   
+						<td>
+							<a class="ellipsis" href="address/{{ item.address }}">{{ item.address }}</a>
+						</td>   
 						<td>{{ item.balance | numeraljs : '0,0[.][00000000]' }} SAFE</td>
 						<td>{{ item.blocks_mined ? item.blocks_mined : 0 }}</td>
 					</tr>
