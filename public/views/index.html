@@ -43,6 +43,7 @@
           <thead>
             <tr>
               <th>Hash</th>
+              <th></th>
               <th class="text-right" translate>Value Out</th>
             </tr>
           </thead>
@@ -50,9 +51,12 @@
           <tr data-ng-show="!txs.length"><td colspan="3" translate>Waiting for transactions...</td></tr>
           <tr class="fader" data-ng-repeat='tx in txs'>
             <td>
-              <a class="ellipsis" href="tx/{{tx.txid}}">{{tx.txid}}</a>
+				<a class="ellipsis" href="tx/{{tx.txid}}">{{tx.txid}}</a>
             </td>
-            <td class="text-right"><span class="ellipsis">{{$root.currency.getConvertion(tx.valueOut) || tx.valueOut + ' SAFE'}}</span></td>
+            <td></td>
+            <td class="text-right">
+				<span class="ellipsis">{{$root.currency.getConvertion(tx.valueOut) || tx.valueOut + ' SAFE'}}</span>
+			</td>
           </tr>
           </tbody>
         </table>

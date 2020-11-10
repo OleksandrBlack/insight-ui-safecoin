@@ -46,7 +46,9 @@
 			  <td colspan="5"><span translate>Waiting for SafeNodes...</span> <span class="loader-gif"></span></td>
 			</tr>
 			<tr class="fader" data-ng-repeat="sn in safenodes | orderBy:'-balance' | orderBy:'-tier'">
-				<td class="text-left">{{sn.SAFE_address}}</td>
+				<td class="text-left"">
+					<a class="ellipsis" href="address/{{sn.SAFE_address}}">{{sn.SAFE_address}}</a>
+				</td>
 				<td class="text-left">{{sn.balance}} SAFE</td>
 				<td class="text-left">{{sn.collateral}}</td>
 				<td class="text-left">{{sn.tier}}</td>
