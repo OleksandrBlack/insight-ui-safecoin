@@ -40,16 +40,8 @@
             <td class="text-right"><time title="{{sync.startTs | date:'medium'}}" >{{humanSince(sync.endTs)}}</time></td>
           </tr>
           <tr>
-            <td translate>Initial Block Chain Height</td>
-            <td class="text-right">{{sync.blockChainHeight}}</td>
-          </tr>
-          <tr>
             <td translate>Synced Blocks</td>
-            <td class="text-right">{{sync.syncedBlocks}}</td>
-          </tr>
-          <tr>
-            <td translate>Skipped Blocks (previously synced)</td>
-            <td class="text-right">{{sync.skippedBlocks}}</td>
+            <td class="text-right">{{sync.blockChainHeight}}</td>
           </tr>
           <tr>
             <td translate>Sync Type</td>
@@ -57,7 +49,26 @@
           </tr>
         </tbody>
       </table>
-
+	  
+      <table class="table" style="table-layout: fixed" data-ng-controller="StatusController" data-ng-init="getStatus('Info')">
+        <thead data-ng-include src="'views/includes/infoStatus.html'"></thead>
+        <tbody>
+          <tr>
+            <td translate>Last Notarized Block Hash (Safecoind)</td>
+            <td class="text-right ellipsis"><a href="block/{{info.notarizedhash}}">{{info.notarizedhash}}</a></td>
+          </tr>
+          <tr>
+            <td translate>Last Notarized txid</td>
+            <td class="text-right ellipsis">
+				<p class="btn-copy" ngclipboard data-clipboard-text="{{info.notarizedtxid}}">
+					<img class="clippy" width="13" src="../img/clippy.svg" alt="Copy to clipboard">
+				</p> 
+			{{info.notarizedtxid}}
+			</td>
+          </tr>
+        </tbody>
+      </table>
+	  
       <h2 translate>Last Block</h2>
       <table class="table" style="table-layout: fixed" data-ng-controller="StatusController" data-ng-init="getStatus('LastBlockHash')">
         <thead data-ng-include src="'views/includes/infoStatus.html'"></thead>
@@ -91,6 +102,14 @@
           <tr>
             <td translate>Blocks</td>
             <td class="text-right"><a href="block-index/{{info.blocks}}">{{info.blocks}}</a></td>
+          </tr>
+          <tr>
+            <td translate>Longest Chain</td>
+            <td class="text-right"><a href="block-index/{{info.longestchain}}">{{info.longestchain}}</a></td>
+          </tr>
+           <tr>
+           <td translate>Last Notarized Height</td>
+            <td class="text-right"><a href="block-index/{{info.notarized}}">{{info.notarized}}</a></td>
           </tr>
           <tr>
             <td translate>Time Offset</td>
