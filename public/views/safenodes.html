@@ -22,13 +22,13 @@
 			<tr data-ng-show="loading">
 			  <td colspan="5"><span translate>Waiting for SafeNodes...</span> <span class="loader-gif"></span></td>
 			</tr>
-			<tr class="fader" >
+			<tr class="fader" data-ng-if="node_count">
 				<td class="text-center">{{node_count}}</td>
 				<td class="text-center">{{tier_0_count}}</td>
 				<td class="text-center">{{tier_1_count}}</td>
 				<td class="text-center">{{tier_2_count}}</td>
 				<td class="text-center">{{tier_3_count}}</td>
-				<td class="text-center">{{collateral_total}} SAFE</td>
+				<td class="text-center">{{$root.currency.getConvertion(collateral_total) || collateral_total + ' SAFE'}}</td>
 			</tr>
 			</tbody>
 		</table>
@@ -49,8 +49,8 @@
 				<td class="text-left"">
 					<a class="ellipsis" href="address/{{sn.SAFE_address}}">{{sn.SAFE_address}}</a>
 				</td>
-				<td class="text-left">{{sn.balance}} SAFE</td>
-				<td class="text-left">{{sn.collateral}}</td>
+				<td class="text-left">{{$root.currency.getConvertion(sn.balance) || sn.balance + ' SAFE'}}</td>
+				<td class="text-left">{{$root.currency.getConvertion(sn.collateral) || sn.collateral + ' SAFE'}}</td>
 				<td class="text-left">{{sn.tier}}</td>
 			</tr>
 			</tbody>
